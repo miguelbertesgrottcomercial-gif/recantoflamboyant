@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recanto Flamboyant · Casa de praia para até 20 pessoas em Guaratuba</title>
+<meta name="description" content="Casa de praia com piscina para até 20 pessoas em Guaratuba (PR): área gourmet, sala de jogos, 6 quartos e 6 vagas, a 4 minutos da Praia Central. Um grupo por vez.">
+<meta name="theme-color" content="#FBF7EC">
+<link rel="icon" type="image/png" sizes="32x32" href="img/marca/icone-32.png">
+<link rel="apple-touch-icon" href="img/marca/icone-180.png">
+
+<!-- Open Graph: trocar SEU-DOMINIO pelo endereço final na publicação (item D) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Recanto Flamboyant">
+<meta property="og:title" content="Recanto Flamboyant · Lazer privativo em Guaratuba para até 20 pessoas">
+<meta property="og:description" content="Piscina, área gourmet e sala de jogos para o grupo todo, a 4 minutos da Praia Central. Um grupo por vez.">
+<meta property="og:image" content="https://SEU-DOMINIO/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://SEU-DOMINIO/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="fontes/tenor-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js')</script>
+
+<style>
+@font-face{font-family:"Tenor Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fontes/tenor-sans-latin.woff2) format("woff2")}
+
+/* Cópia dos papéis de marca/tokens.css (paleta do logo, 27/10/2026) */
+:root{
+  --creme:#FBF7EC;          /* fundo do logo */
+  --areia:#F3EADB;          /* um degrau de tom */
+  --superficie:#FFFDF7;
+  --tinta:#3B2617;          /* texto corrido: 13,3:1 */
+  --marrom:#642D09;         /* madeira escura: títulos, 10,2:1 */
+  --suave:#6E5A4C;          /* notas: 6,1:1 */
+  --folhagem:#307444;       /* verde das folhas: ícones e detalhes, 5,3:1 */
+  --vermelho:#C8361F;       /* botão: vermelho flamboyant fechado, 5,25:1 com branco */
+  --vermelho-hover:#A82C17;
+  --verde:#1F4A2E;          /* folhagem escura: faixas, 9,4:1 com creme */
+  --mar:#66D3E8;            /* azul do mar: só decoração */
+  --linha:#E8DECB;
+
+  --f-titulo:"Tenor Sans","Optima","Candara","Segoe UI",system-ui,sans-serif;
+  --f-texto:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+
+  --s-display:clamp(2.75rem,5.8vw,5.25rem);
+  --s-h2:clamp(1.85rem,3.6vw,3rem);
+  --s-lead:1.25rem;
+  --s-body:1.0625rem;
+  --s-small:0.875rem;
+
+  --raio:999px;              /* botões em pílula, como no tokens.css */
+  --raio-foto:24px;
+  --margem:20px;
+  --max:1200px;
+
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+  --ease-expo:cubic-bezier(0.16,1,0.3,1);
+  --ease-in-out:cubic-bezier(0.76,0,0.24,1);
+  --ease-soft:cubic-bezier(0.33,1,0.68,1);
+}
+@media (min-width:960px){:root{--margem:32px}}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--f-texto);font-size:var(--s-body);line-height:1.55;color:var(--tinta);background:var(--creme);-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%;height:auto}
+a,button,summary,label{touch-action:manipulation}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:400;color:var(--marrom);line-height:1.08;letter-spacing:-0.01em;text-wrap:balance}
+h2{font-size:var(--s-h2);margin-bottom:1rem}
+h3{font-size:var(--s-lead);line-height:1.25;margin-bottom:.35rem;letter-spacing:0}
+p{text-wrap:pretty;max-width:62ch}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding-left:max(var(--margem),env(safe-area-inset-left));padding-right:max(var(--margem),env(safe-area-inset-right))}
+section{padding:80px 0}
+.lead{font-size:var(--s-lead);line-height:1.5}
+.nota{font-size:var(--s-small);color:var(--suave)}
+.pular{position:absolute;left:12px;top:-60px;z-index:50;background:var(--marrom);color:var(--creme);padding:12px 16px;border-radius:var(--raio);font-weight:700;text-decoration:none}
+.pular:focus{top:12px}
+:focus-visible{outline:3px solid var(--marrom);outline-offset:3px}
+.foto{margin:0;border-radius:var(--raio-foto);overflow:clip;background:var(--areia)}
+.foto img,.foto video{width:100%;height:100%;object-fit:cover}
+figcaption{font-size:var(--s-small);color:var(--suave);margin-top:.55rem}
+
+/* Botão de ação: o único vermelho de interface */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:56px;padding:.6rem 1.5rem;border:0;border-radius:var(--raio);
+  background:var(--vermelho);color:#fff;font:700 var(--s-body)/1.2 var(--f-texto);text-align:center;text-decoration:none;cursor:pointer;
+  transition:transform 140ms var(--ease-out),background-color 180ms ease}
+.btn:active{transform:scale(.97)}
+.btn svg{width:22px;height:22px;flex:none}
+.garantia-curta{display:flex;align-items:flex-start;gap:.45rem;margin-top:.8rem;font-size:var(--s-small);color:var(--suave)}
+.garantia-curta svg{width:18px;height:18px;flex:none;margin-top:.1rem;color:var(--folhagem)}
+.ico{stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Topo */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr)}
+.hero__foto{aspect-ratio:1/1;border-radius:0 0 var(--raio-foto) var(--raio-foto)}
+.hero__foto img{object-position:50% 92%}
+.hero__texto{position:relative;padding:0 max(var(--margem),env(safe-area-inset-left)) 44px}
+.hero__flor{width:min(210px,52vw);margin:-64px 0 6px -6px;position:relative;z-index:1}
+.hero h1{font-size:var(--s-display);line-height:.98;letter-spacing:-0.02em}
+.hero h1 .linha{display:block;overflow-x:visible;overflow-y:clip;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 [data-line]{display:block}
+.marca-linha{margin-top:.75rem;font-size:var(--s-small);letter-spacing:.22em;text-transform:uppercase;color:var(--marrom)}
+.hero .lead{margin-top:1.2rem;max-width:26ch;color:var(--tinta);font-family:var(--f-titulo);font-size:1.5rem;line-height:1.3}
+.hero .acao{margin-top:1.5rem}
+.hero .btn{width:100%}
+.menu{display:none}
+
+/* Datas: faixa verde */
+.datas{background:var(--verde);color:var(--creme);padding:56px 0}
+.datas h2{color:var(--creme);font-size:clamp(1.6rem,3vw,2.4rem)}
+.datas .wrap{display:grid;gap:24px}
+.periodos{list-style:none;display:grid;gap:10px}
+.periodos li{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:16px 18px;border-radius:18px;background:rgba(251,247,236,.1)}
+.periodos b{display:block;font-family:var(--f-titulo);font-weight:400;font-size:var(--s-lead)}
+.periodos small{font-size:var(--s-small);opacity:.9}
+.status{flex:none;display:inline-flex;align-items:center;gap:.45rem;padding:.3rem .8rem;border-radius:999px;background:var(--creme);color:var(--verde);font-size:var(--s-small);font-weight:700}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--verde)}
+.datas .nota{color:var(--creme);opacity:.85}
+
+/* O nome */
+.nome .wrap{display:grid;gap:36px;align-items:center}
+.nome__foto{aspect-ratio:4/5}
+.nome__foto img{object-position:50% 40%}
+.refugio{width:min(260px,70%);margin:1.6rem 0 0}
+
+/* Lazer */
+.lazer{background:var(--areia)}
+.lazer__topo{display:grid;gap:36px;align-items:start}
+.lazer__video{aspect-ratio:9/16;max-height:82svh;margin:0 auto;width:100%}
+.lazer__itens{list-style:none;display:grid;gap:26px;margin-top:1.6rem}
+.lazer__itens p{margin:0}
+.ambientes{list-style:none;display:grid;gap:28px;margin-top:56px}
+.ambientes .foto{aspect-ratio:4/5}
+
+/* A casa */
+.casa__topo{display:grid;gap:36px;align-items:start}
+.numeros{list-style:none;display:grid;gap:14px}
+.numeros li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:16px;align-items:baseline}
+.numeros b{font-family:var(--f-titulo);font-weight:400;font-size:var(--s-h2);line-height:1;color:var(--marrom);font-variant-numeric:tabular-nums}
+.lista{list-style:none;display:grid;gap:.55rem;margin-top:1.4rem}
+.lista li{padding-left:1.15rem;position:relative}
+.lista li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--vermelho)}
+.galeria{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:52px}
+.galeria .foto{aspect-ratio:1/1}
+
+/* Localização */
+.local{background:var(--superficie)}
+.local .wrap{display:grid;gap:36px;align-items:start}
+.distancia b{display:block;font-family:var(--f-titulo);font-weight:400;font-size:var(--s-display);line-height:1;color:var(--marrom)}
+.distancia p{margin-top:.6rem}
+.bairro{columns:2;column-gap:28px;list-style:none;margin-top:1rem}
+.bairro li{break-inside:avoid;padding:.2rem 0}
+
+/* Região */
+.regiao .wrap>p{margin-bottom:2rem}
+.regiao__grade{display:grid;gap:22px}
+.regiao__grade .foto{aspect-ratio:4/3}
+.regiao__grade .larga .foto{aspect-ratio:16/9}
+.regiao__grade h3{margin-top:.9rem}
+.regiao__grade p{margin:0}
+.evento{margin-top:40px;padding:28px;border-radius:var(--raio-foto);background:var(--verde);color:var(--creme);display:grid;gap:18px}
+.evento h3{color:var(--creme);font-size:var(--s-h2);line-height:1.1;margin:0}
+.evento p{margin:0}
+.evento .btn{justify-self:start}
+
+/* Preços */
+.precos{background:var(--areia)}
+.simulador{display:none;gap:16px;margin:2rem 0 3rem}
+.js .simulador{display:grid}
+.sim__controles{display:grid;gap:22px;padding:24px;border-radius:var(--raio-foto);background:var(--superficie)}
+.sim__controles fieldset{border:0;min-width:0}
+.sim__controles legend,.sim__rotulo{display:block;font-weight:700;margin-bottom:.6rem}
+.opcoes{display:flex;flex-wrap:wrap;gap:8px}
+.opcao{position:relative}
+.opcao input{position:absolute;opacity:0;width:1px;height:1px}
+.opcao span{display:inline-flex;align-items:center;min-height:44px;padding:.5rem 16px;border-radius:999px;background:var(--areia);color:var(--tinta);font-weight:700;line-height:1.2;cursor:pointer;transition:background-color 180ms ease,color 180ms ease,transform 140ms var(--ease-out)}
+.opcao span:active{transform:scale(.97)}
+.opcao input:checked+span{background:var(--marrom);color:var(--creme)}
+.opcao input:focus-visible+span{outline:3px solid var(--marrom);outline-offset:3px}
+.contador{display:flex;align-items:center;gap:10px}
+.contador button{width:48px;height:48px;border:0;border-radius:50%;background:var(--areia);color:var(--marrom);font:700 1.5rem/1 var(--f-texto);cursor:pointer;transition:transform 140ms var(--ease-out),background-color 180ms ease}
+.contador button:active{transform:scale(.94)}
+.contador input{width:4.2ch;height:48px;border:0;border-radius:14px;background:var(--creme);text-align:center;font:700 var(--s-lead) var(--f-texto);color:var(--tinta);-moz-appearance:textfield;appearance:textfield}
+.contador input::-webkit-inner-spin-button,.contador input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.regra{font-size:var(--s-small);color:var(--suave);margin-top:.5rem}
+.sim__resultado{padding:24px;border-radius:var(--raio-foto);background:var(--verde);color:var(--creme)}
+.sim__resultado .total{display:block;font-family:var(--f-titulo);font-size:var(--s-h2);line-height:1.05;font-variant-numeric:tabular-nums}
+.sim__resultado .pp{display:block;font-size:var(--s-lead);margin-top:.3rem;font-variant-numeric:tabular-nums}
+.sim__resultado .r-titulo{display:block;margin-top:.3rem;opacity:.9}
+.sim__resultado ul{list-style:none;display:grid;gap:.35rem;margin:1.1rem 0 1.4rem;font-variant-numeric:tabular-nums}
+.sim__resultado li{display:flex;justify-content:space-between;gap:1rem}
+.sim__resultado .btn{width:100%}
+.sim__resultado .nota{color:var(--creme);opacity:.9;margin-top:.8rem}
+.tabelas{display:grid;gap:32px}
+.tabela h3{margin-bottom:.15rem}
+.tabela .nota{margin-bottom:.6rem}
+.tabela table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tabela th,.tabela td{padding:.65rem 0;text-align:left;font-weight:400;vertical-align:top;border-top:1px solid var(--linha)} /* taste-skill-ignore: tabela real */
+.tabela td{text-align:right;font-weight:700;color:var(--marrom);white-space:nowrap;padding-left:1rem}
+.tabela th small,.tabela td small{display:block;font-size:var(--s-small);color:var(--suave);font-weight:400}
+.destaque-preco{color:var(--verde);font-weight:700}
+
+/* Reserva: faixa marrom */
+.reserva{background:var(--marrom);color:var(--creme)}
+.reserva h2,.reserva h3{color:var(--creme)}
+.reserva .wrap{display:grid;gap:40px}
+.politica{list-style:none;display:grid;gap:14px;margin-top:1.4rem}
+.politica li{padding:16px 18px;border-radius:18px;background:rgba(251,247,236,.09)}
+.politica b{display:block;font-family:var(--f-titulo);font-weight:400;font-size:var(--s-lead);margin-bottom:.2rem}
+.passos{display:grid;gap:12px;padding-left:1.4rem;margin-top:.8rem}
+.passos li::marker{font-family:var(--f-titulo)}
+.regras{list-style:none;display:grid;gap:.5rem;margin-top:.8rem}
+
+/* Perguntas */
+.faq .wrap{display:grid;gap:28px}
+.faq details{background:var(--superficie);border-radius:18px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 56px 18px 20px;font-weight:700;position:relative;border-radius:18px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;color:var(--marrom);transition:transform 180ms var(--ease-out)}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{padding:0 20px 18px}
+
+/* Fim */
+.final{background:var(--areia);text-align:center}
+.final__foto{max-width:900px;margin:0 auto 36px;aspect-ratio:16/10}
+.final__foto img{object-position:50% 62%}
+.final p{margin:0 auto 1.6rem}
+.final .garantia-curta{justify-content:center}
+
+footer{padding:64px 0 128px;text-align:center}
+footer .logo{width:min(360px,80vw);margin:0 auto 1.2rem}
+footer p{margin:.4rem auto 0;max-width:70ch}
+.creditos{margin-top:1.6rem;font-size:var(--s-small);color:var(--suave)}
+.creditos a{color:inherit}
+
+/* Barra fixa no celular: único elemento que flutua */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px max(16px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  background:var(--creme);box-shadow:0 -10px 30px -18px rgba(58,34,18,.6); /* taste-skill-ignore: barra fixa flutua */
+  transform:translateY(110%);transition:transform 320ms var(--ease-out)}
+.barra.on{transform:none}
+.barra .btn{width:100%}
+@media (max-width:959px){html{scroll-padding-bottom:96px}}
+@media (min-width:600px) and (max-width:959px){.hero__foto{aspect-ratio:16/9}}
+@media (min-width:600px) and (max-width:959px){
+  .barra{left:auto;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));padding:0;background:none;border-radius:999px;box-shadow:0 12px 28px -12px rgba(59,38,23,.7)} /* taste-skill-ignore: botão flutuante */
+  .barra .btn{width:auto}
+}
+
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--vermelho-hover)}
+  .opcao span:hover{background:var(--linha)}
+  .opcao input:checked+span:hover{background:var(--marrom)}
+  .contador button:hover{background:var(--linha)}
+  .faq summary:hover{background:var(--creme)}
+  .menu a:hover,.creditos a:hover{text-decoration-color:currentColor}
+}
+
+@media (min-width:720px){
+  .periodos{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .periodos li{flex-direction:column;align-items:flex-start}
+  .galeria{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .ambientes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .regiao__grade{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .regiao__grade .larga{grid-column:1/-1}
+  .tabelas{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+  .numeros li{grid-template-columns:9.5rem minmax(0,1fr)}
+}
+@media (min-width:960px){
+  section{padding:136px 0}
+  .hero{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);min-height:min(100svh,920px)}
+  .hero__foto{grid-column:2;grid-row:1;aspect-ratio:auto;position:relative;min-height:100%;border-radius:0 0 0 var(--raio-foto)}
+  .hero__foto img{position:absolute;inset:0}
+  .hero__texto{grid-column:1;grid-row:1;align-self:center;padding:120px 56px 80px max(var(--margem),calc((100vw - var(--max))/2 + var(--margem)))}
+  .hero__flor{margin:0 0 8px -8px;width:200px}
+  .hero .btn{width:auto}
+  .menu{display:flex;gap:26px;position:absolute;top:34px;left:max(var(--margem),calc((100vw - var(--max))/2 + var(--margem)));z-index:2;list-style:none}
+  .menu a{color:var(--marrom);font-weight:700;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:.25em;text-decoration-thickness:2px;transition:text-decoration-color 180ms ease}
+  .datas{padding:88px 0}
+  .datas .wrap{grid-template-columns:4fr 8fr;gap:56px;align-items:center}
+  .nome .wrap{grid-template-columns:6fr 6fr;gap:80px}
+  .lazer__topo{grid-template-columns:5fr 7fr;gap:80px;align-items:center}
+  .lazer__video{max-height:none;margin:0}
+  .casa__topo{grid-template-columns:5fr 7fr;gap:80px}
+  .local .wrap{grid-template-columns:5fr 7fr;gap:80px}
+  .regiao__grade{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+  .regiao__grade .larga{grid-column:span 2;grid-row:span 2}
+  .regiao__grade .larga .foto{aspect-ratio:auto;height:calc(100% - 7.5rem);min-height:360px}
+  .evento{grid-template-columns:7fr 5fr;align-items:center;padding:40px}
+  .evento .btn{justify-self:end}
+  .simulador{grid-template-columns:7fr 5fr;gap:24px}
+  .sim__controles,.sim__resultado{padding:36px}
+  .reserva .wrap{grid-template-columns:6fr 6fr;gap:80px;align-items:start}
+  .faq .wrap{grid-template-columns:4fr 8fr;gap:80px;align-items:start}
+  .barra{display:none}
+  footer{padding:96px 0}
+}
+
+/* Movimento: transform e opacidade; nada para quem pediu menos movimento */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero [data-line]{transform:translateY(105%);animation:sobe-linha 900ms var(--ease-expo) forwards;animation-delay:calc(220ms + var(--i) * 90ms)}
+  .js .hero [data-load]{opacity:0;transform:translateY(14px);animation:sobe 560ms var(--ease-out) forwards;animation-delay:var(--d)}
+  .js .hero__flor{opacity:0;transform:translateY(10px) rotate(-6deg) scale(.94);animation:flor 1100ms var(--ease-expo) 120ms forwards}
+  .js .hero__foto{clip-path:inset(0 0 100% 0);animation:abre 1000ms var(--ease-in-out) 100ms forwards}
+  .js .hero__foto img{transform:scale(1.08);animation:assenta 1400ms var(--ease-expo) 80ms forwards}
+  .js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity 700ms var(--ease-out),transform 900ms var(--ease-out);transition-delay:calc(var(--i,0) * 70ms)}
+  .js [data-reveal].is-in{opacity:1;transform:none}
+  .js [data-cortina] .vidro{clip-path:inset(0 0 100% 0);transition:clip-path 1100ms var(--ease-in-out)}
+  .js [data-cortina] .vidro img{transform:scale(1.1);transition:transform 1500ms var(--ease-soft)}
+  .js [data-cortina].is-in .vidro{clip-path:inset(0)}
+  .js [data-cortina].is-in .vidro img{transform:none}
+  @supports (animation-timeline:view()){
+    .final__foto img{animation:deriva linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  }
+}
+@keyframes sobe-linha{to{transform:none}}
+@keyframes sobe{to{opacity:1;transform:none}}
+@keyframes flor{to{opacity:1;transform:none}}
+@keyframes abre{to{clip-path:inset(0)}}
+@keyframes assenta{to{transform:none}}
+@keyframes deriva{from{transform:scale(1.1) translateY(-3%)}to{transform:scale(1.1) translateY(3%)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.barra{transition:none}}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path class="ico" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path class="ico" d="m9 12 2 2 4-4"/></symbol>
+</svg>
+
+<header class="hero" id="topo">
+  <nav aria-label="Seções"><ul class="menu">
+    <li><a href="#lazer">Lazer</a></li>
+    <li><a href="#casa">A casa</a></li>
+    <li><a href="#regiao">Guaratuba</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#reserva">Como reservar</a></li>
+  </ul></nav>
+  <figure class="foto hero__foto">
+    <img src="img/casa/topo-piscina-600.jpg" srcset="img/casa/topo-piscina-600.jpg 600w, img/casa/topo-piscina-1100.jpg 1100w" sizes="(min-width:960px) 50vw, 100vw" alt="Piscina da casa vista do alto, ao sol, com o sobrado branco e o céu azul ao fundo" width="600" height="1066" fetchpriority="high">
+  </figure>
+  <div class="hero__texto">
+    <img class="hero__flor" src="img/marca/flor.webp" alt="" width="687" height="398">
+    <h1 translate="no"><span class="linha"><span data-line style="--i:0">Recanto</span></span><span class="linha"><span data-line style="--i:1">Flamboyant</span></span></h1>
+    <p class="marca-linha" data-load style="--d:420ms">Casa de praia · Guaratuba (PR)</p>
+    <p class="lead" data-load style="--d:480ms">Lazer privativo para até 20 pessoas: piscina, área gourmet e sala de jogos, a 4 minutos da Praia Central.</p>
+    <div class="acao" data-load style="--d:560ms">
+      <a class="btn js-whats" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Ver datas e valores no WhatsApp</a>
+      <p class="garantia-curta"><svg aria-hidden="true"><use href="#i-escudo"/></svg>Natal e Réveillon: sinal devolvido se cancelar até 30/11.</p>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="datas" id="datas" aria-labelledby="t-datas">
+  <div class="wrap">
+    <div>
+      <h2 id="t-datas" data-reveal>Uma casa, um grupo por vez</h2>
+      <p data-reveal style="--i:1">A casa inteira fica com uma família ou turma por período. Quem confirma primeiro escolhe a data.</p>
+    </div>
+    <div>
+      <!-- Atualizar status e data sempre que fechar uma reserva -->
+      <ul class="periodos">
+        <li><div><b>Natal</b><small>24 a 27/12</small></div><span class="status">livre</span></li>
+        <li><div><b>Réveillon</b><small>27/12 a 03/01</small></div><span class="status">livre</span></li>
+        <li><div><b>Jan. e fev.</b><small>a partir de 2 diárias</small></div><span class="status">livre</span></li>
+        <li><div><b>Carnaval</b><small>05 a 10/02</small></div><span class="status">livre</span></li>
+        <li><div><b>Páscoa</b><small>25 a 28/03</small></div><span class="status">livre</span></li>
+      </ul>
+      <p class="nota" style="margin-top:.8rem">Atualizado em 27/10/2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="nome" id="nome" aria-labelledby="t-nome">
+  <div class="wrap">
+    <figure class="foto nome__foto" data-cortina>
+      <div class="vidro" style="height:100%"><img src="img/casa/fachada-flamboyant-600.jpg" srcset="img/casa/fachada-flamboyant-600.jpg 600w, img/casa/fachada-flamboyant-1100.jpg 1100w" sizes="(min-width:960px) 560px, 100vw" alt="O sobrado de dois andares à sombra da copa do flamboyant, com redes na varanda de baixo" decoding="async" width="600" height="1066"></div>
+    </figure>
+    <div>
+      <h2 id="t-nome" data-reveal>A casa debaixo do flamboyant</h2>
+      <p class="lead" data-reveal style="--i:1">O nome vem da árvore na frente da casa, que faz sombra no quintal e na varanda.</p>
+      <p data-reveal style="--i:2;margin-top:1rem">Um casarão de dois andares para até 20 pessoas, com clima de clube particular: longe do barulho da orla e perto do comércio do bairro. Feito para a família toda passar o verão junta.</p>
+      <img class="refugio" data-reveal style="--i:3" src="img/marca/assinatura-refugio.webp" alt="Mais que uma casa, um refúgio." width="277" height="117" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="lazer" id="lazer" aria-labelledby="t-lazer">
+  <div class="wrap">
+    <div class="lazer__topo">
+      <figure class="foto lazer__video" data-reveal>
+        <video id="video-piscina" muted loop playsinline preload="none" poster="video/piscina-loop.jpg" width="540" height="960" aria-label="Vídeo curto: caminhando ao lado da piscina, ao sol, até a área gourmet">
+          <source src="video/piscina-loop.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <div>
+        <h2 id="t-lazer" data-reveal>A praia aqui é opção</h2>
+        <p class="lead" data-reveal style="--i:1">Uma área de lazer só do seu grupo, para adultos e crianças passarem o dia inteiro em casa.</p>
+        <ul class="lazer__itens">
+          <li data-reveal style="--i:2"><h3>Piscina de 3 × 6 m</h3><p>Parte rasa com 1,30 m e funda com 1,80 m, escada de inox e espreguiçadeiras para o sol.</p></li>
+          <li data-reveal style="--i:3"><h3>Área gourmet coberta</h3><p>Churrasqueira, fogão cooktop, forno elétrico, micro-ondas, chaleira elétrica e louça para mais de 20 pessoas.</p></li>
+          <li data-reveal style="--i:4"><h3>Para os dias de chuva</h3><p>Sala de jogos com mesa de sinuca no 2º andar, envidraçada, e sala de TV.</p></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="ambientes" aria-label="Ambientes de lazer">
+      <li><figure><div class="foto"><img src="img/casa/gourmet-rede-600.jpg" srcset="img/casa/gourmet-rede-600.jpg 600w, img/casa/gourmet-rede-1100.jpg 1100w" sizes="(min-width:720px) 380px, 100vw" alt="Área gourmet coberta com mesa grande, cadeiras estofadas e rede colorida em primeiro plano" loading="lazy" width="600" height="1066"></div><figcaption>Área gourmet, com rede e mesa grande</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/sinuca-600.jpg" srcset="img/casa/sinuca-600.jpg 600w, img/casa/sinuca-1100.jpg 1100w" sizes="(min-width:720px) 380px, 100vw" alt="Mesa de sinuca de feltro verde na sala envidraçada do 2º andar, com árvores na janela" loading="lazy" width="600" height="1066"></div><figcaption>Sala de jogos com sinuca, no 2º andar</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/varanda-rede-600.jpg" srcset="img/casa/varanda-rede-600.jpg 600w, img/casa/varanda-rede-1100.jpg 1100w" sizes="(min-width:720px) 380px, 100vw" alt="Varanda térrea com rede de franjas, mesa e poltronas de corda" loading="lazy" width="600" height="1066"></div><figcaption>Varanda com redes, mesas e poltronas</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<section class="casa" id="casa" aria-labelledby="t-casa">
+  <div class="wrap">
+    <div class="casa__topo">
+      <div>
+        <h2 id="t-casa" data-reveal>Espaço para 20 pessoas</h2>
+        <p data-reveal style="--i:1">Seis quartos nos dois andares, com quarto, suíte e banheiro no térreo para quem prefere evitar escada.</p>
+        <ul class="lista">
+          <li data-reveal style="--i:1">Wi-Fi de 100 Mb e máquina de lavar roupa</li>
+          <li data-reveal style="--i:2">Cadeiras de praia e guarda-sol para levar</li>
+          <li data-reveal style="--i:3">Roupa de cama inclusa</li>
+          <li data-reveal style="--i:4">Aceita pet, sem custo, com quintal grande (a piscina fica fora dos limites dele)</li>
+          <li data-reveal style="--i:5">Ventilador de teto em todos os quartos; a suíte master tem ar-condicionado</li>
+        </ul>
+      </div>
+      <ul class="numeros">
+        <li data-reveal style="--i:1"><b>20</b><span>pessoas: 18 nas camas e 2 no sofá-cama</span></li>
+        <li data-reveal style="--i:2"><b>6</b><span>quartos, 2 deles suítes</span></li>
+        <li data-reveal style="--i:3"><b>4</b><span>banheiros: 2 nas suítes, 1 na área gourmet e 1 na área social</span></li>
+        <li data-reveal style="--i:4"><b>6</b><span>vagas: 3 dentro do portão e 3 do lado de fora, reservadas para a casa</span></li>
+      </ul>
+    </div>
+    <ul class="galeria" aria-label="Fotos dos quartos e ambientes">
+      <li><figure><div class="foto"><img src="img/casa/quarto-1-600.jpg" alt="Quarto com duas camas de casal, ventilador de teto e quadro de flores" loading="lazy" width="600" height="1066"></div><figcaption>Quarto com duas camas</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/quarto-3-600.jpg" alt="Suíte com cama de casal arrumada, almofadas e janela" loading="lazy" width="600" height="1066"></div><figcaption>Suíte</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/quarto-2-600.jpg" alt="Quarto com cama de casal e cama de solteiro" loading="lazy" width="600" height="1066"></div><figcaption>Quarto família</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/quarto-4-600.jpg" alt="Quarto com cama de casal, janela e ventilador de teto" loading="lazy" width="600" height="1066"></div><figcaption>Quarto de casal</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/sala-tv-600.jpg" alt="Sala de TV com sofá retrátil, poltronas vermelhas e estante" loading="lazy" width="600" height="1066"></div><figcaption>Sala de TV</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/sala-600.jpg" alt="Sala com sofá cinza, mesa de centro e porta para a varanda" loading="lazy" width="600" height="1066"></div><figcaption>Sala</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/cozinha-600.jpg" alt="Cozinha com armários verde-água, fogão e mesa redonda" loading="lazy" width="600" height="1066"></div><figcaption>Cozinha</figcaption></figure></li>
+      <li><figure><div class="foto"><img src="img/casa/banheiro-600.jpg" alt="Banheiro revestido em branco, com box e pia" loading="lazy" width="600" height="1066"></div><figcaption>Banheiro</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
+
+<section class="local" id="local" aria-labelledby="t-local">
+  <div class="wrap">
+    <div class="distancia">
+      <h2 id="t-local">Longe do barulho, perto de tudo</h2>
+      <b>4 min</b>
+      <p>de carro até a Praia Central e o Centro, a 1,8–2 km. Lá ficam o letreiro GUARATUBA, bares e restaurantes.</p>
+    </div>
+    <div>
+      <p class="lead">Ficar um pouco recuado da orla é a vantagem na alta temporada: menos trânsito, sem caixa de som na porta e noites tranquilas para idosos e crianças.</p>
+      <h3 style="margin-top:1.8rem">No bairro, para o dia a dia</h3>
+      <ul class="bairro">
+        <li>Supermercado</li><li>Farmácia</li><li>Padaria</li><li>Lojas</li><li>Pastelaria</li><li>Hamburgueria</li><li>Pizzaria</li><li>Churrascaria</li><li>Ginásio de esportes</li><li>Praça com aluguel de patinetes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="regiao" id="regiao" aria-labelledby="t-regiao">
+  <div class="wrap">
+    <h2 id="t-regiao">Guaratuba além da casa</h2>
+    <p class="lead">Mar aberto, baía e morro na mesma cidade. E o primeiro verão com a Ponte de Guaratuba: de Curitiba, sem fila de balsa.</p>
+    <div class="regiao__grade">
+      <article class="larga">
+        <figure class="foto"><img src="img/regiao/praia-central.jpg" alt="Praia Central de Guaratuba vista do alto, com ondas, a orla e os morros ao fundo" loading="lazy" width="1200" height="799"></figure>
+        <h3>Praia Central</h3>
+        <p>A 4 minutos de carro: o letreiro GUARATUBA, bares, restaurantes, lojas e lanchonetes na orla.</p>
+      </article>
+      <article>
+        <figure class="foto"><img src="img/regiao/pedras-morro.jpg" alt="Mar azul batendo em pedras grandes, visto do alto do Morro do Cristo" loading="lazy" width="1200" height="900"></figure>
+        <h3>Morro do Cristo</h3>
+        <p>Mirante com vista da orla, subida por escadaria. Em revitalização pela prefeitura: confira o acesso antes de ir.</p>
+      </article>
+      <article>
+        <figure class="foto"><img src="img/regiao/caieiras.jpg" alt="Faixa de areia de Caieiras com barcos ancorados na entrada da baía" loading="lazy" width="1200" height="899"></figure>
+        <h3>Caieiras</h3>
+        <p>Colônia de pescadores na entrada da baía, com pôr do sol sobre a água.</p>
+      </article>
+      <article>
+        <figure class="foto"><img src="img/regiao/igreja-matriz.jpg" alt="Fachada branca da Igreja Matriz Nossa Senhora do Bom Sucesso" loading="lazy" width="1200" height="800"></figure>
+        <h3>Igreja Matriz</h3>
+        <p>Nossa Senhora do Bom Sucesso, de 1771, tombada pelo IPHAN. Em restauração: vale ver por fora.</p>
+      </article>
+      <article>
+        <figure class="foto"><img src="img/regiao/guaras.jpg" alt="Revoada de guarás, aves vermelhas, sobre a baía ao entardecer" loading="lazy" width="1200" height="554"></figure>
+        <h3>Guarás na baía</h3>
+        <p>A revoada das aves vermelhas sobre a baía, ao entardecer.</p>
+      </article>
+    </div>
+    <div class="evento">
+      <div>
+        <h3>Páscoa com maratona</h3>
+        <p style="margin-top:.8rem">A Maratona Internacional do Paraná passa pela Ponte de Guaratuba de 26 a 28/03/2027. Para equipes e famílias de atletas: 3 diárias por R$&nbsp;6.000: R$&nbsp;100 por pessoa por dia com 20 pessoas, mais a limpeza.</p>
+      </div>
+      <a class="btn js-whats" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Reservar a Páscoa</a>
+    </div>
+  </div>
+</section>
+
+<section class="precos" id="precos" aria-labelledby="t-precos">
+  <div class="wrap">
+    <h2 id="t-precos">Valores da temporada</h2>
+    <p>Valor fechado para a casa inteira, até 20 pessoas. Limpeza de R$&nbsp;400 por estadia; todas as condições estão aqui, antes da conversa.</p>
+
+    <div class="simulador" id="simulador">
+      <div class="sim__controles">
+        <h3>Monte sua estadia</h3>
+        <fieldset>
+          <legend>Período</legend>
+          <div class="opcoes" id="f-periodo">
+            <label class="opcao"><input type="radio" name="periodo" value="fimdeano" checked><span>Fim de ano</span></label>
+            <label class="opcao"><input type="radio" name="periodo" value="verao"><span>Jan. e fev.</span></label>
+            <label class="opcao"><input type="radio" name="periodo" value="carnaval"><span>Carnaval</span></label>
+            <label class="opcao"><input type="radio" name="periodo" value="pascoa"><span>Páscoa</span></label>
+          </div>
+        </fieldset>
+        <fieldset id="f-pacote-campo">
+          <legend>Pacote</legend>
+          <div class="opcoes" id="f-pacote">
+            <label class="opcao"><input type="radio" name="pacote" value="natal"><span>Natal · 3 diárias</span></label>
+            <label class="opcao"><input type="radio" name="pacote" value="reveillon" checked><span>Réveillon · 7 diárias</span></label>
+            <label class="opcao"><input type="radio" name="pacote" value="combo"><span>Natal + Réveillon · 10 diárias</span></label>
+          </div>
+        </fieldset>
+        <div id="f-diarias-campo" hidden>
+          <label class="sim__rotulo" for="diarias">Diárias</label>
+          <div class="contador">
+            <button type="button" id="d-menos" aria-label="Uma diária a menos">−</button>
+            <input type="number" id="diarias" name="diarias" min="2" max="30" value="5" inputmode="numeric" autocomplete="off">
+            <button type="button" id="d-mais" aria-label="Uma diária a mais">+</button>
+          </div>
+          <p class="regra" id="regra-fds">De 2 a 4 diárias, só com as noites de sexta e sábado. Fora do fim de semana, o mínimo é 5.</p>
+        </div>
+        <div>
+          <label class="sim__rotulo" for="pessoas">Pessoas</label>
+          <div class="contador">
+            <button type="button" id="p-menos" aria-label="Uma pessoa a menos">−</button>
+            <input type="number" id="pessoas" name="pessoas" min="1" max="20" value="20" inputmode="numeric" autocomplete="off">
+            <button type="button" id="p-mais" aria-label="Uma pessoa a mais">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="sim__resultado" aria-live="polite">
+        <span class="total" id="r-total">R$&nbsp;19.300</span>
+        <span class="pp" id="r-pp">≈ R$&nbsp;138 por pessoa, por noite</span>
+        <span class="r-titulo" id="r-titulo">Réveillon (27/12 a 03/01), 7 diárias, 20 pessoas</span>
+        <ul>
+          <li><span id="r-hosp-rotulo">Hospedagem</span><b id="r-hosp">R$&nbsp;18.900</b></li>
+          <li><span>Limpeza</span><b>R$&nbsp;400</b></li>
+          <li><span id="r-sinal-rotulo">Sinal na reserva (50%)</span><b id="r-sinal">R$&nbsp;9.450</b></li>
+          <li><span>Caução, devolvida após a vistoria</span><b>R$&nbsp;1.500</b></li>
+        </ul>
+        <a class="btn" id="r-whats" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Pedir no WhatsApp</a>
+        <p class="nota">O total soma hospedagem e limpeza. A caução volta em até 3 dias.</p>
+      </div>
+    </div>
+
+    <div class="tabelas">
+      <div class="tabela">
+        <h3>Natal e Réveillon</h3>
+        <p class="nota">Entrada a partir das 16h, saída até as 10h</p>
+        <table>
+          <tr><th scope="row">Natal<small>24 a 27/12 · 3 diárias de R$&nbsp;2.500</small></th><td>R$&nbsp;7.500</td></tr>
+          <tr><th scope="row">Réveillon<small>27/12 a 03/01 · 7 diárias de R$&nbsp;2.700</small></th><td>R$&nbsp;18.900</td></tr>
+          <tr><th scope="row">Natal + Réveillon<small>24/12 a 03/01 · 10 diárias de R$&nbsp;2.400</small><small class="destaque-preco">R$&nbsp;2.400 a menos que separados</small></th><td>R$&nbsp;24.000</td></tr>
+        </table>
+      </div>
+      <div class="tabela">
+        <h3>Janeiro e fevereiro</h3>
+        <p class="nota">2 a 4 diárias só com sexta e sábado; senão, mínimo 5</p>
+        <table>
+          <tr><th scope="row">2 diárias<small>fim de semana</small></th><td>R$&nbsp;1.800<small>por diária</small></td></tr>
+          <tr><th scope="row">3 ou 4 diárias</th><td>R$&nbsp;1.600<small>por diária</small></td></tr>
+          <tr><th scope="row">5 ou 6 diárias</th><td>R$&nbsp;1.500<small>por diária</small></td></tr>
+          <tr><th scope="row">7 diárias ou mais</th><td>R$&nbsp;1.400<small>por diária</small></td></tr>
+        </table>
+      </div>
+      <div class="tabela">
+        <h3>Feriados de 2027</h3>
+        <p class="nota">Pacotes fechados</p>
+        <table>
+          <tr><th scope="row">Carnaval<small>05 a 10/02 · 5 diárias de R$&nbsp;2.200</small></th><td>R$&nbsp;11.000</td></tr>
+          <tr><th scope="row">Páscoa e Maratona<small>25 a 28/03 · 3 diárias de R$&nbsp;2.000</small><small class="destaque-preco">R$&nbsp;100 por pessoa/dia com 20, sem a limpeza</small></th><td>R$&nbsp;6.000</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reserva" id="reserva" aria-labelledby="t-reserva">
+  <div class="wrap">
+    <div>
+      <h2 id="t-reserva">Reserve com segurança</h2>
+      <p class="lead">Contrato simples, sinal por PIX em nome de quem assina o contrato e regras claras de cancelamento.</p>
+      <ul class="politica">
+        <li><b>Natal e Réveillon</b>Sinal de 50% na reserva e o restante até 7 dias antes. Cancelando até 30/11, o sinal volta inteiro.</li>
+        <li><b>Carnaval e Páscoa</b>Sinal de 50% na reserva e o restante até 7 dias antes. Cancelando até 30 dias antes, o sinal volta inteiro.</li>
+        <li><b>Janeiro e fevereiro</b>Sinal de 30% na reserva e o restante na chegada. Cancelando até 15 dias antes, o sinal volta inteiro.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Como funciona</h3>
+      <ol class="passos">
+        <li>Você manda as datas e quantas pessoas.</li>
+        <li>A gente responde com o valor final, com a limpeza somada.</li>
+        <li>Contrato assinado e, só depois, o sinal por PIX em nome de quem assina.</li>
+      </ol>
+      <h3 style="margin-top:2rem">Combinados da casa</h3>
+      <ul class="regras">
+        <li>Entrada a partir das 16h e saída até as 10h, para a limpeza e o tratamento da piscina.</li>
+        <li>Caução de R$&nbsp;1.500, devolvida em até 3 dias após a vistoria.</li>
+        <li>Silêncio a partir das 22h, exceto em datas combinadas, como 24/12 e 31/12.</li>
+        <li>Visitas são bem-vindas, com aviso prévio.</li>
+        <li>Na saída, pedimos o lixo ensacado e a louça lavada.</li>
+        <li>Em estadias de mais de 5 diárias, o piscineiro passa em dia combinado, sem custo.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="perguntas" aria-labelledby="t-faq">
+  <div class="wrap">
+    <div>
+      <h2 id="t-faq">Antes de reservar</h2>
+      <p>As dúvidas mais comuns. Ficou alguma? Pergunte no WhatsApp.</p>
+    </div>
+    <div>
+      <details><summary>Qual é o endereço?</summary><p>A casa fica no bairro Cohapar, em Guaratuba. O endereço completo vai no contrato.</p></details>
+      <details><summary>Tem toalha?</summary><p>Não. Roupa de cama sim; as toalhas de banho cada um traz.</p></details>
+      <details><summary>Tem ar-condicionado?</summary><p>Na suíte master. Todos os outros quartos têm ventilador de teto.</p></details>
+      <details><summary>Posso levar o cachorro?</summary><p>Pode, sem custo. O quintal é grande; só a piscina fica fora dos limites dele.</p></details>
+      <details><summary>Tem horário de silêncio?</summary><p>A partir das 22h, exceto em datas combinadas antes, como 24/12 e 31/12.</p></details>
+      <details><summary>Podemos receber visitas?</summary><p>Sim, com aviso prévio.</p></details>
+      <details><summary>A piscina é segura para crianças?</summary><p>Ela tem parte rasa (1,30 m) e funda (1,80 m). Crianças sempre com um adulto por perto.</p></details>
+      <details><summary>É boa para idosos?</summary><p>Sim. Tem quarto, suíte e banheiro no térreo, sem escada.</p></details>
+      <details><summary>Precisa de carro para ir à praia?</summary><p>É melhor: são cerca de 4 minutos de carro até a Praia Central. Para o dia a dia, o comércio do bairro fica perto.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contato" aria-labelledby="t-final">
+  <div class="wrap">
+    <figure class="foto final__foto">
+      <img src="img/casa/piscina-gourmet-600.jpg" srcset="img/casa/piscina-gourmet-600.jpg 600w, img/casa/piscina-gourmet-1100.jpg 1100w" sizes="(min-width:960px) 900px, 100vw" alt="Beira da piscina ao sol, com a área gourmet coberta e as redes ao fundo" loading="lazy" width="600" height="1066">
+    </figure>
+    <h2 id="t-final">O Réveillon tem uma noite só</h2>
+    <p>E a casa recebe um grupo. Mande as datas e quantas pessoas; a gente responde com o valor fechado.</p>
+    <div>
+      <a class="btn js-whats" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+      <p class="garantia-curta"><svg aria-hidden="true"><use href="#i-escudo"/></svg>Natal e Réveillon: sinal devolvido se cancelar até 30/11.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="img/marca/logo-completo.webp" alt="Recanto Flamboyant, casa de praia em Guaratuba" width="829" height="685" loading="lazy">
+    <p>Casa de praia no bairro Cohapar, Guaratuba (PR).</p>
+    <p class="creditos">Fotos da casa: arquivo da família (dez/2025). Fotos da cidade, via Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Praia_Central.JPG">Praia Central</a>, de Adiascamargo (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>);
+      <a href="https://commons.wikimedia.org/wiki/File:Vista_do_Morro_do_Cristo-Guaratuba-Pr.JPG">Morro do Cristo</a>, de Glaucia Paes (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>);
+      <a href="https://commons.wikimedia.org/wiki/File:Renato_Soares_Praia_de_Caieiras_Guaratuba_PR_(40147623925).jpg">Caieiras</a> e
+      <a href="https://commons.wikimedia.org/wiki/File:Renato_Soares_Igreja_Nossa_Sr_do_Bom_Sucesso_Guaratuba_PR_(40147747095).jpg">Igreja Matriz</a>, de Renato Soares/MTur (domínio público);
+      <a href="https://commons.wikimedia.org/wiki/File:Revoada_dos_Guar%C3%A1s_-_Guaratuba_PR.jpg">Revoada dos guarás</a>, de TropoPiegas (<a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>).</p>
+  </div>
+</footer>
+
+<div class="barra" id="barra">
+  <a class="btn js-whats" href="https://wa.me/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whats"/></svg>Ver datas e valores</a>
+</div>
+
+<script>
+// WhatsApp: número com DDI e DDD, só dígitos (ex.: 5541912345678). Vazio = abre a escolha de contato.
+var NUMERO = "5541988305748";
+var ORIGENS = { grupo: " pelo grupo", instagram: " pelo Instagram", facebook: " pelo Facebook" };
+// Preços oficiais 2026/2027 (iguais às tabelas da página e a orcamento.py)
+var LIMPEZA = 400, CAUCAO = 1500;
+var PACOTES = {
+  natal:     { nome: "Natal (24 a 27/12)", d: 3, v: 7500, sinal: 0.5 },
+  reveillon: { nome: "Réveillon (27/12 a 03/01)", d: 7, v: 18900, sinal: 0.5 },
+  combo:     { nome: "Natal + Réveillon (24/12 a 03/01)", d: 10, v: 24000, sinal: 0.5 },
+  carnaval:  { nome: "Carnaval (05 a 10/02)", d: 5, v: 11000, sinal: 0.5 },
+  pascoa:    { nome: "Páscoa (25 a 28/03)", d: 3, v: 6000, sinal: 0.5 }
+};
+function diariaVerao(d) { return d >= 7 ? 1400 : d >= 5 ? 1500 : d >= 3 ? 1600 : 1800; }
+
+(function () {
+  function $(id) { return document.getElementById(id); }
+  var o = (new URLSearchParams(location.search).get("origem") || "").toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 30);
+  var deOnde = ORIGENS[o] || (o ? " (" + o + ")" : "");
+  function linkWhats(msg) { return "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(msg); }
+  var msgGeral = o ? "Oi! Vi a casa Recanto Flamboyant" + deOnde + " e queria saber das datas."
+                   : "Oi! Vi a página da casa Recanto Flamboyant e queria saber das datas.";
+  document.querySelectorAll(".js-whats").forEach(function (a) { a.href = linkWhats(msgGeral); });
+
+  // Simulador
+  var reais = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL", maximumFractionDigits: 0 });
+  var est = { periodo: "fimdeano", pacote: "reveillon" };
+  var campoPacote = $("f-pacote-campo"), campoDiarias = $("f-diarias-campo");
+  var inDiarias = $("diarias"), inPessoas = $("pessoas");
+  function lim(v, a, b) { return Math.min(b, Math.max(a, parseInt(v, 10) || a)); }
+  function calcula() {
+    var n = lim(inPessoas.value, 1, 20), nome, d, hosp, sinal, rotuloHosp;
+    if (est.periodo === "verao") {
+      d = lim(inDiarias.value, 2, 30);
+      var pd = diariaVerao(d);
+      nome = "Janeiro ou fevereiro"; hosp = d * pd; sinal = 0.3;
+      rotuloHosp = d + " diárias de " + reais.format(pd);
+      $("regra-fds").hidden = d >= 5;
+    } else {
+      var k = est.periodo === "fimdeano" ? est.pacote : est.periodo;
+      var p = PACOTES[k]; nome = p.nome; d = p.d; hosp = p.v; sinal = p.sinal;
+      rotuloHosp = d + " diárias";
+    }
+    var total = hosp + LIMPEZA;
+    var pp = Math.round(total / (n * d));
+    var pessoasTxt = n + (n === 1 ? " pessoa" : " pessoas");
+    $("r-total").textContent = reais.format(total);
+    $("r-pp").textContent = "≈ " + reais.format(pp) + " por pessoa, por noite";
+    $("r-titulo").textContent = nome + ", " + d + " diárias, " + pessoasTxt;
+    $("r-hosp-rotulo").textContent = "Hospedagem: " + rotuloHosp;
+    $("r-hosp").textContent = reais.format(hosp);
+    $("r-sinal-rotulo").textContent = "Sinal na reserva (" + Math.round(sinal * 100) + "%)";
+    $("r-sinal").textContent = reais.format(Math.round(hosp * sinal));
+    $("r-whats").href = linkWhats("Oi! Vi a casa Recanto Flamboyant" + (deOnde || " pelo site") + ". Quero saber de " + nome + ", " + d + " diárias, " + pessoasTxt + " (estimativa do site: " + reais.format(total) + " com limpeza).");
+  }
+  $("f-periodo").addEventListener("change", function (e) {
+    est.periodo = e.target.value;
+    campoPacote.hidden = est.periodo !== "fimdeano";
+    campoDiarias.hidden = est.periodo !== "verao";
+    calcula();
+  });
+  $("f-pacote").addEventListener("change", function (e) { est.pacote = e.target.value; calcula(); });
+  [[inDiarias, 2, 30, "d"], [inPessoas, 1, 20, "p"]].forEach(function (c) {
+    var input = c[0], a = c[1], b = c[2];
+    input.addEventListener("input", calcula);
+    input.addEventListener("blur", function () { input.value = lim(input.value, a, b); calcula(); });
+    $(c[3] + "-menos").addEventListener("click", function () { input.value = Math.max(a, lim(input.value, a, b) - 1); calcula(); });
+    $(c[3] + "-mais").addEventListener("click", function () { input.value = Math.min(b, lim(input.value, a, b) + 1); calcula(); });
+  });
+  calcula();
+
+  // Vídeo: só toca quando aparece, e nunca para quem pediu menos movimento
+  var video = $("video-piscina");
+  var calmo = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Entradas ao rolar (uma vez), vídeo e barra fixa
+  var revelar = document.querySelectorAll("[data-reveal], [data-cortina]");
+  var barra = $("barra"), topo = $("topo"), fimPagina = $("contato");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revelar.forEach(function (el) { io.observe(el); });
+    if (!calmo) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { video.play().catch(function () {}); } else { video.pause(); } });
+      }, { threshold: 0.25 }).observe(video);
+    }
+    var vis = { topo: true, fim: false };
+    var ob = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { vis[e.target === topo ? "topo" : "fim"] = e.isIntersecting; });
+      barra.classList.toggle("on", !vis.topo && !vis.fim);
+    });
+    ob.observe(topo); ob.observe(fimPagina);
+  } else {
+    revelar.forEach(function (el) { el.classList.add("is-in"); });
+    barra.classList.add("on");
+  }
+})();
+</script>
+</body>
+</html>
